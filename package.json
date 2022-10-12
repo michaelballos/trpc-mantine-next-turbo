@@ -1,10 +1,18 @@
 {
-  "name": "create-t3-turbo",
+  "name": "trpc-mantine-next-turbo",
+  "version": "1.0.0",
   "private": true,
-  "packageManager": "pnpm@7.13.0",
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=14.0.0"
+  },
+  "workspaces": [
+    "apps/*", 
+    "packages/*"
+  ],
   "scripts": {
     "postinstall": "turbo postinstall",
-    "db-push": "pnpm --filter @acme/db db-push",
+    "db-push": "yarn --filter @acme/db db-push",
     "build": "turbo build",
     "dev": "turbo dev --parallel",
     "cleen": "turbo clean",
